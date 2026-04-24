@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca Digital Cardeal da Silva</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>📚 Cardeal Digital</h1>
+        <p>A Biblioteca Comunitária da Escola Municipal Cardeal da Silva</p>
+        <p class="ods-badge">🌍 Contribuindo para a ODS 4 & 10 da ONU</p>
+      </div>
+    </header>
+
+    <section class="intro container">
+      <h2>Bem-vindo ao nosso acervo!</h2>
+      <p>
+        Explore contos regionais, literatura de cordel, obras em domínio público
+        e produções incríveis dos nossos próprios alunos. O conhecimento agora
+        está na palma da sua mão.
+      </p>
+    </section>
+
+    <section class="filtros container">
+      <button class="btn-filtro ativo" onclick="filtrarLivros('todos')">
+        Todos
+      </button>
+      <button class="btn-filtro" onclick="filtrarLivros('alunos')">
+        Produções dos Alunos
+      </button>
+      <button class="btn-filtro" onclick="filtrarLivros('cordel')">
+        Cultura & Cordel
+      </button>
+      <button class="btn-filtro" onclick="filtrarLivros('classicos')">
+        Clássicos
+      </button>
+    </section>
+
+    <section class="acervo container" id="lista-acervo">
+      <article class="livro" data-categoria="cordel">
+        <h3>A Chegada de Lampião no Inferno</h3>
+        <p class="autor">José Pacheco</p>
+        <p class="descricao">
+          Um dos maiores clássicos da literatura de cordel brasileira.
+        </p>
+        <a href="livros/a-chegada-de-lampiao-no-inferno.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="cordel">
+        <h3>O Romance do Pavão Misterioso</h3>
+        <p class="autor">João Melchíades</p>
+        <p class="descricao">
+          Aventuras fantásticas em formato de cordel tradicional.
+        </p>
+        <a href="livros/o-romance-do-pavao-misterioso.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="cordel">
+        <h3>A História da Donzela Teodora</h3>
+        <p class="autor">Leandro Gomes de Barros</p>
+        <p class="descricao">
+          A astúcia e sabedoria feminina em versos de cordel.
+        </p>
+        <a href="livros/donzela-teodora.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="cordel">
+        <h3>O Cachorro dos Mortos</h3>
+        <p class="autor">Leandro Gomes de Barros</p>
+        <p class="descricao">
+          Mistério e assombração na cultura popular nordestina.
+        </p>
+        <a href="livros/cachorro-dos-mortos.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="cordel">
+        <h3>O Navio Negreiro</h3>
+        <p class="autor">Castro Alves</p>
+        <p class="descricao">
+          O clamor por justiça e liberdade pelo grande poeta baiano.
+        </p>
+        <a href="livros/navio-negreiro.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="cordel">
+        <h3>Espumas Flutuantes</h3>
+        <p class="autor">Castro Alves</p>
+        <p class="descricao">
+          A obra que marcou o romantismo e a poesia no Brasil.
+        </p>
+        <a href="livros/espumas-flutuantes.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>O Alienista</h3>
+        <p class="autor">Machado de Assis</p>
+        <p class="descricao">
+          Uma reflexão genial e irônica sobre a linha fina da loucura.
+        </p>
+        <a href="livros/o-alienista.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>A Cartomante e Outros Contos</h3>
+        <p class="autor">Machado de Assis</p>
+        <p class="descricao">
+          Histórias curtas que exploram a essência da alma humana.
+        </p>
+        <a href="livros/a-cartomante.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>Noite na Taverna</h3>
+        <p class="autor">Álvares de Azevedo</p>
+        <p class="descricao">
+          Contos de mistério e paixões sombrias do ultrarromantismo.
+        </p>
+        <a href="livros/noite-na-taverna.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>Triste Fim de Policarpo Quaresma</h3>
+        <p class="autor">Lima Barreto</p>
+        <p class="descricao">
+          As desventuras de um patriota ingênuo no Brasil recém-republicano.
+        </p>
+        <a href="livros/policarpo-quaresma.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>Sobre a Brevidade da Vida</h3>
+        <p class="autor">Sêneca</p>
+        <p class="descricao">
+          Um tratado filosófico sobre o uso sábio do tempo que nos é dado.
+        </p>
+        <a href="livros/brevidade-da-vida.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>Da Tranquilidade da Alma</h3>
+        <p class="autor">Sêneca</p>
+        <p class="descricao">
+          Reflexões práticas para encontrar paz e constância em um mundo
+          caótico.
+        </p>
+        <a
+          href="livros/tranquilidade-da-alma.pdf"
+          class="btn-ler"
+          target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>O Manual (Enchiridion)</h3>
+        <p class="autor">Epicteto</p>
+        <p class="descricao">
+          Lições atemporais sobre como focar no que podemos controlar.
+        </p>
+        <a href="livros/enchiridion.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>A Metamorfose</h3>
+        <p class="autor">Franz Kafka</p>
+        <p class="descricao">
+          O clássico absoluto sobre o absurdo da condição humana.
+        </p>
+        <a href="livros/a-metamorfose.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="classicos">
+        <h3>A Moreninha</h3>
+        <p class="autor">Joaquim Manuel de Macedo</p>
+        <p class="descricao">
+          O romance que inaugurou a ficção nacional de sucesso.
+        </p>
+        <a href="livros/a-moreninha.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="alunos">
+        <h3>Contos de Salvador</h3>
+        <p class="autor">Alunos do 8º Ano (Turma B)</p>
+        <p class="descricao">
+          Coletânea de histórias curtas ambientadas no Pelourinho e Itapuã.
+        </p>
+        <a href="livros/contos-salvador.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+
+      <article class="livro" data-categoria="alunos">
+        <h3>Poemas do Cotidiano Escolar</h3>
+        <p class="autor">Turmas do 9º Ano</p>
+        <p class="descricao">
+          Versos que refletem a juventude, os sonhos e os desafios da escola.
+        </p>
+        <a href="livros/poemas-cotidiano.pdf" class="btn-ler" target="_blank"
+          >Ler Agora</a
+        >
+      </article>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2026 Projeto de Extensão II - Vinicius Santana (Análise e
+          Desenvolvimento de Sistemas).
+        </p>
+        <p>Escola Municipal Cardeal da Silva - Salvador, BA.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa; /* Fundo claro e amigável */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif; /* Fonte com serifa para títulos (lembra livros) */
+}
+
+/* CENTRALIZAR CONTEÚDO */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* CABEÇALHO */
+header {
+    background-color: #004d40; /* Verde escuro (educação/calma) */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.ods-badge {
+    display: inline-block;
+    background-color: #ffca28;
+    color: #333;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* INTRODUÇÃO */
+.intro {
+    text-align: center;
+    padding: 40px 0 20px;
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    color: #004d40;
+    margin-bottom: 15px;
+}
+
+/* FILTROS DE CATEGORIA */
+.filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-filtro {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-filtro:hover {
+    background-color: #bdbdbd;
+}
+
+.btn-filtro.ativo {
+    background-color: #004d40;
+    color: white;
+}
+
+/* LISTA DE ACERVO (GRID) */
+.acervo {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.livro {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.livro h3 {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.livro .autor {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.livro .descricao {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Empurra o botão para o fundo */
+}
+
+.btn-ler {
+    text-align: center;
+    background-color: #00695c;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-ler:hover {
+    background-color: #004d40;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
